@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DAVID-PC</Machine>
+    <WindowsUser>David</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>baa1bfc3-8ad7-45b2-8154-9a7fab5b73eb</PackageIdentityName>
+    <PackageIdentityPublisher>CN=David</PackageIdentityPublisher>
+    <IntermediateOutputPath>F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bin\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>F38BC3FEA67A9173A77CD66777DDC4298C027D51B93091BC3EEE4192B290FD9F</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>baa1bfc3-8ad7-45b2-8154-9a7fab5b73eb_1.0.0.0_neutral__ywwvhtjmx9rt8</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>baa1bfc3-8ad7-45b2-8154-9a7fab5b73eb_ywwvhtjmx9rt8!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>baa1bfc3-8ad7-45b2-8154-9a7fab5b73eb</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=David</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-05T13:21:30.760</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Attack.png">
+      <PackagePath>images\Enemy\Skeleton Attack.png</PackagePath>
+      <Modified>2017-05-04T22:21:13.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Dead.png">
+      <PackagePath>images\Enemy\Skeleton Dead.png</PackagePath>
+      <Modified>2017-05-04T22:21:43.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Hit.png">
+      <PackagePath>images\Enemy\Skeleton Hit.png</PackagePath>
+      <Modified>2017-05-04T22:22:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Idle.png">
+      <PackagePath>images\Enemy\Skeleton Idle.png</PackagePath>
+      <Modified>2017-05-04T22:22:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Enemy\Skeleton React.png">
+      <PackagePath>images\Enemy\Skeleton React.png</PackagePath>
+      <Modified>2017-05-04T22:22:45.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Walk.png">
+      <PackagePath>images\Enemy\Skeleton Walk.png</PackagePath>
+      <Modified>2017-05-04T22:22:55.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Hero\KnightSheet.png">
+      <PackagePath>images\Hero\KnightSheet.png</PackagePath>
+      <Modified>2018-02-05T13:14:44.293</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2017-08-30T14:10:38.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Map\GameMap.png">
+      <PackagePath>images\Map\GameMap.png</PackagePath>
+      <Modified>2018-02-05T11:20:47.159</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Map\RuinMap.png">
+      <PackagePath>images\Map\RuinMap.png</PackagePath>
+      <Modified>2018-02-05T08:41:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Map\singularRock.png">
+      <PackagePath>images\Map\singularRock.png</PackagePath>
+      <Modified>2018-02-05T13:17:58.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\player.png">
+      <PackagePath>images\player.png</PackagePath>
+      <Modified>2018-02-04T15:04:45.231</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-08-30T14:10:38.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-08-30T14:10:38.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-08-30T14:10:38.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-08-30T14:10:38.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-08-30T14:10:38.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-08-30T14:10:38.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\images\win.png">
+      <PackagePath>images\win.png</PackagePath>
+      <Modified>2018-02-04T15:04:31.290</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2018-02-05T12:59:26.373</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2018-02-05T12:20:04.747</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\boot.js">
+      <PackagePath>js\boot.js</PackagePath>
+      <Modified>2018-02-04T15:21:06.262</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\game.js">
+      <PackagePath>js\game.js</PackagePath>
+      <Modified>2018-02-05T13:08:54.296</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\load.js">
+      <PackagePath>js\load.js</PackagePath>
+      <Modified>2018-02-05T13:21:11.226</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\menu.js">
+      <PackagePath>js\menu.js</PackagePath>
+      <Modified>2018-02-05T12:48:20.706</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\phaser.js">
+      <PackagePath>js\phaser.js</PackagePath>
+      <Modified>2016-08-26T00:24:15.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\play.js">
+      <PackagePath>js\play.js</PackagePath>
+      <Modified>2018-02-05T13:38:20.613</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\lose.js">
+      <PackagePath>js\lose.js</PackagePath>
+      <Modified>2018-02-05T13:01:04.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\js\win.js">
+      <PackagePath>js\win.js</PackagePath>
+      <Modified>2018-02-05T12:48:16.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\server\server.js">
+      <PackagePath>server\server.js</PackagePath>
+      <Modified>2018-02-04T16:31:49.627</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-05T13:21:30.686</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
