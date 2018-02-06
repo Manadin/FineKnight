@@ -7,7 +7,10 @@ var upKey;
 var downKey;
 var rightKey;
 var leftKey;
-
+var platforms;
+var enemies;
+var text;
+var enemyTimer=1;
 var playState = {
     
     create: function() {
@@ -75,7 +78,6 @@ var playState = {
 
         var ground;
 
-
         // 8 tiles next to each other
         for (var d = 0; d < 8; d++) {
             ground = platforms.create(game.world.width - 150 + (d * 16), game.world.height - 200, 'stoneTile');
@@ -101,8 +103,6 @@ var playState = {
             ground.scale.setTo(1, 1);
             ground.body.immovable = true;
         }
- 
-        //text = game.add.text(16, 16, 'unknown', { fontSize: '32px', fill: '#ffffff' })
     },
 
     update: function() {
@@ -116,19 +116,37 @@ var playState = {
         // When the player sprite and sprite overlap, the win function
         // is called.
         game.physics.arcade.overlap(this.player, this.win, this.Win, null, this);
+      
         if (!this.player.exists) {
             this.lose(this);
         }
-
+      
         //Collision with ground
         var hitPlatform = game.physics.arcade.collide(this.player, platforms);
+        game.physics.arcade.collide(enemies, platforms);
         this.player.body.velocity.x = 0;
         this.player.body.velocity.y = 0;
 
+        enemies.forEach(function(enemy) {
+            if(enemyTimer<100&&enemyTimer>0){
+                enemy.body.velocity.x = 100;
+                enemy.scale.x = 1;
+
+            }else if(enemyTimer>100){
+                enemyTimer=-99;
+            }else{
+                enemy.body.velocity.x = -100;
+                enemy.scale.x = -1;
+            }
+            enemy.animations.play('move');
+            if(enemy.body.x+10>playState.player.body.x&&enemy.body.x-10<playState.player.body.x&&enemy.body.y+10>
+                playState.player.body.y&&enemy.body.y-10<playState.player.body.y){
+                playState.lose(playState);
+            }
+        });
+        enemyTimer++;
         // Finally, we give the human player a means to move the sprite.
         // Enabling x-axis movement:
-        this.player.body.velocity.x = 0;
-        this.player.body.velocity.y = 0;
 
         if (leftKey.isDown){
             this.player.body.velocity.x = -400;

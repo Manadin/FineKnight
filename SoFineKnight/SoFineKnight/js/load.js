@@ -20,8 +20,7 @@ var loadState = {
         game.load.image('win', 'images/win.png');
         game.load.image('background', 'images/Map/SKIES.png')
         game.load.image('stoneTile', 'images/Map/singularRock.png');
-        
-        
+        game.load.spritesheet('skeleton', 'images/Enemy/Skeleton Walk.png', 22, 33);
     },
 
     create: function() {
