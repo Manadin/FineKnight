@@ -184,7 +184,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\play.js">
       <PackagePath>js\play.js</PackagePath>
-      <Modified>2018-02-06T14:13:47.420</Modified>
+      <Modified>2018-02-06T14:31:50.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\lose.js">
       <PackagePath>js\lose.js</PackagePath>

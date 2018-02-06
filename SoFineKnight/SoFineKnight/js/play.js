@@ -10,7 +10,10 @@ var leftKey;
 var platforms;
 var enemies;
 var text;
-var enemyTimer=1;
+var enemyTimer = 1;
+var text = 0;
+var death = 0;
+
 var playState = {
     
     create: function () {
@@ -160,12 +163,17 @@ var playState = {
             ground.scale.setTo(1, 1);
             ground.body.immovable = true;
         }
+
+        text = game.add.text(16, 16, 'deathCounter', { fontsize: '32px', fill: '#ffffff'});
+
     },
 
     update: function () {
         
         // Collision
         //this.game.physics.arcade.collide(this.player, this.collisionLayer);
+
+        text.setText('Deaths: ' + death);
 
         //Move the skies left
         skies.tilePosition.x -= 0.5;
@@ -242,6 +250,8 @@ var playState = {
         // We start the win state
         game.state.start('win');
 
+        death = 0;
+
         music.stop();
         gotItem.play();
 
@@ -249,7 +259,7 @@ var playState = {
 
     lose: function () {
         game.state.start('lose');
-
+        death++;
         music.stop();
         deathSound.play();
     }
