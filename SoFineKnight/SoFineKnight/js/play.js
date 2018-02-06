@@ -77,8 +77,6 @@ var playState = {
             var enemy = enemies.create(game.world.randomX, game.world.randomY, 'skeleton', w);
             enemy.animations.add('move', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, true);
             enemy.body.gravity.y = 100;
-
-
         }
 
         // Play music
@@ -98,7 +96,7 @@ var playState = {
 
         var ground;
 
-        // 8 tiles next to each other
+        // 4 tiles next to each other
         for (var d = 0; d < 4; d++) {
             //Platform 1
             ground = platforms.create(game.world.width - 750 + (d * 16), game.world.height - 600, 'stoneTile');
