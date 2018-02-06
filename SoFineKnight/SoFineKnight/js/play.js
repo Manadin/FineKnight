@@ -77,10 +77,13 @@ var playState = {
         game.physics.enable(enemies, Phaser.Physics.ARCADE);
         enemies.enableBody = true;
 
-        for (var w = 0; w < 5; w++) {
-            var enemy = enemies.create(game.world.randomX, game.world.randomY, 'skeleton', w);
+        for (var w = 0; w < 10; w++) {
+            var enemy = enemies.create(game.world.randomX, w*35, 'skeleton', w);
             enemy.animations.add('move', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, true);
             enemy.body.gravity.y = 100;
+            //enemy.body.velocity.x = 75;
+
+
         }
 
         // Play music
@@ -169,7 +172,7 @@ var playState = {
     },
 
     update: function () {
-        
+
         // Collision
         //this.game.physics.arcade.collide(this.player, this.collisionLayer);
 
