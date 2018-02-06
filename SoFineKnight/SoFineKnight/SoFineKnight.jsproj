@@ -72,6 +72,7 @@
     <Content Include="images\Enemy\Skeleton Idle.png" />
     <Content Include="images\Enemy\Skeleton React.png" />
     <Content Include="images\Enemy\Skeleton Walk.png" />
+    <Content Include="images\Hero\Hero.png" />
     <Content Include="images\Hero\KnightSheet.png" />
     <Content Include="images\LockScreenLogo.scale-200.png" />
     <Content Include="images\Map\images\collision.png" />

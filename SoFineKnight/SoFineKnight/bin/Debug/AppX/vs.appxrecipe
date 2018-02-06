@@ -32,7 +32,7 @@
     <AppXManifest Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-06T12:25:49.644</Modified>
+      <Modified>2018-02-06T14:12:32.902</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +79,10 @@
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Walk.png">
       <PackagePath>images\Enemy\Skeleton Walk.png</PackagePath>
       <Modified>2018-02-06T07:58:28.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Hero\Hero.png">
+      <PackagePath>images\Hero\Hero.png</PackagePath>
+      <Modified>2018-02-06T14:08:21.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Hero\KnightSheet.png">
       <PackagePath>images\Hero\KnightSheet.png</PackagePath>
@@ -168,7 +172,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\load.js">
       <PackagePath>js\load.js</PackagePath>
-      <Modified>2018-02-06T12:55:52.457</Modified>
+      <Modified>2018-02-06T14:10:10.514</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\menu.js">
       <PackagePath>js\menu.js</PackagePath>
@@ -180,7 +184,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\play.js">
       <PackagePath>js\play.js</PackagePath>
-      <Modified>2018-02-06T13:01:47.862</Modified>
+      <Modified>2018-02-06T14:31:50.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\lose.js">
       <PackagePath>js\lose.js</PackagePath>
@@ -197,7 +201,7 @@
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-06T12:25:49.565</Modified>
+      <Modified>2018-02-06T14:12:32.747</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
