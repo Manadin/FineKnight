@@ -16,6 +16,8 @@ var loadState = {
         game.load.image('player', 'images/player.png');
         game.load.image('win', 'images/win.png');
         game.load.image('stoneTile', 'images/Map/singularRock.png');
+
+        game.load.spritesheet('knight_sheet', 'images/Hero/knightSheet.png', 42, 42, 33);
     },
 
     create: function() {

@@ -44,11 +44,16 @@ var playState = {
         }
               
         // Create the player sprite and enable physics.
-        this.player = game.add.sprite(16, game.world.height - 80, 'player');
+        this.player = game.add.sprite(16, game.world.height - 90, 'knight_sheet');
         game.physics.enable(this.player, Phaser.Physics.ARCADE);
         this.player.body.gravity.y = 25000;
         this.player.checkWorldBounds = true;
         this.player.outOfBoundsKill = true;
+
+        //Load player animations
+        this.player.animations.add('idle', [7, 8, 9, 10], 4, true);
+        this.player.animations.add('walk', [22, 23, 24, 25, 26, 27, 28, 29], 5, true);
+        this.player.animations.play("idle");
 
 
         text = game.add.text(16, 16, 'unknown', { fontSize: '32px', fill: '#ffffff' })
@@ -76,9 +81,13 @@ var playState = {
 
         if (leftKey.isDown){
             this.player.body.velocity.x = -400;
+            this.player.animations.play("walk");
+            this.player.scale.x = -1;
         }
         if (rightKey.isDown){
             this.player.body.velocity.x = 400;
+            this.player.animations.play("walk");
+            this.player.scale.x = 1;
         }
         //Enabling y-axis movement;
         if (upKey.isDown){
@@ -94,6 +103,9 @@ var playState = {
         }
         if (downKey.isDown){
             this.player.body.velocity.y = 400;
+        }
+        if (downKey.isUp && upKey.isUp && rightKey.isUp && leftKey.isUp) {
+            this.player.animations.play("idle");
         }
     },
 
