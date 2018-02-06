@@ -61,6 +61,11 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Audio\bodenstaendig_2000_in_rock_4bit.mp3" />
+    <Content Include="Audio\GotItem.mp3" />
+    <Content Include="Audio\gta_5_death.mp3" />
+    <Content Include="Audio\Jump.wav" />
+    <Content Include="Audio\Wasted.wav" />
     <Content Include="images\Enemy\Skeleton Attack.png" />
     <Content Include="images\Enemy\Skeleton Dead.png" />
     <Content Include="images\Enemy\Skeleton Hit.png" />
@@ -98,9 +103,6 @@
     <TypeScriptCompile Include="tsDefinitions\phaser.d.ts" />
     <TypeScriptCompile Include="tsDefinitions\pixi.d.ts" />
     <None Include="SoFineKnight_TemporaryKey.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="animations\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}" />

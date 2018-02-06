@@ -12,15 +12,15 @@ var menuState = {
                                     {font: '50px Arial', fill: '#ffffff'});
         
         // Add the press enter label on the screen.
-        var WLabel = game.add.text(80, 160, 'press "W" to start', 
+        var WLabel = game.add.text(80, 160, 'Press "W" to start', 
                                     { font: '25px Arial', fill: '#ffffff' });
 
         // Add the press enter label on the screen.
-        var WLabel = game.add.text(80, 240, 'W A S D to control', 
+        var controlLabel = game.add.text(80, 240, 'W A S D to control', 
                                     {font: '25px Arial', fill: '#ffffff'});
 
         // Add the press enter label on the screen.
-        var WLabel = game.add.text(80, 320, 'Hold "W" to go higher',
+        var highLabel = game.add.text(80, 320, 'Hold "W" to go higher',
                                     { font: '25px Arial', fill: '#ffffff' });
         
         // We define the W key so the player can press it.

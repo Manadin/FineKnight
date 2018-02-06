@@ -25,6 +25,21 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\bodenstaendig_2000_in_rock_4bit.mp3">
+      <PackagePath>Audio\bodenstaendig_2000_in_rock_4bit.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\GotItem.mp3">
+      <PackagePath>Audio\GotItem.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\gta_5_death.mp3">
+      <PackagePath>Audio\gta_5_death.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\Jump.wav">
+      <PackagePath>Audio\Jump.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\Wasted.wav">
+      <PackagePath>Audio\Wasted.wav</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Attack.png">
       <PackagePath>images\Enemy\Skeleton Attack.png</PackagePath>
     </AppxPackagedFile>

@@ -32,10 +32,30 @@
     <AppXManifest Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-06T11:16:13.202</Modified>
+      <Modified>2018-02-06T12:25:49.644</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\bodenstaendig_2000_in_rock_4bit.mp3">
+      <PackagePath>Audio\bodenstaendig_2000_in_rock_4bit.mp3</PackagePath>
+      <Modified>2018-02-06T01:07:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\GotItem.mp3">
+      <PackagePath>Audio\GotItem.mp3</PackagePath>
+      <Modified>2018-02-05T09:16:17.738</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\gta_5_death.mp3">
+      <PackagePath>Audio\gta_5_death.mp3</PackagePath>
+      <Modified>2018-02-06T11:50:26.370</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\Jump.wav">
+      <PackagePath>Audio\Jump.wav</PackagePath>
+      <Modified>2018-02-05T09:17:16.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\Audio\Wasted.wav">
+      <PackagePath>Audio\Wasted.wav</PackagePath>
+      <Modified>2015-07-06T01:42:37.764</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Attack.png">
       <PackagePath>images\Enemy\Skeleton Attack.png</PackagePath>
       <Modified>2018-02-06T07:58:28.590</Modified>
@@ -62,7 +82,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Hero\KnightSheet.png">
       <PackagePath>images\Hero\KnightSheet.png</PackagePath>
-      <Modified>2018-02-06T07:58:28.596</Modified>
+      <Modified>2018-02-06T13:10:49.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
@@ -70,15 +90,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Map\images\collision.png">
       <PackagePath>images\Map\images\collision.png</PackagePath>
-      <Modified>2018-02-06T10:07:19.800</Modified>
+      <Modified>2018-02-06T12:05:22.055</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Map\images\RuinMap.png">
       <PackagePath>images\Map\images\RuinMap.png</PackagePath>
-      <Modified>2018-02-05T08:41:56.000</Modified>
+      <Modified>2018-02-06T12:05:22.054</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Map\SKIES.png">
       <PackagePath>images\Map\SKIES.png</PackagePath>
-      <Modified>2018-02-06T08:42:06.363</Modified>
+      <Modified>2018-02-06T12:05:22.053</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Map\singularRock.png">
       <PackagePath>images\Map\singularRock.png</PackagePath>
@@ -124,11 +144,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Map\tilemaps\FineKnightMap.json">
       <PackagePath>images\Map\tilemaps\FineKnightMap.json</PackagePath>
-      <Modified>2018-02-06T11:15:15.380</Modified>
+      <Modified>2018-02-06T12:05:22.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Map\tilemaps\FineKnightMap.tmx">
       <PackagePath>images\Map\tilemaps\FineKnightMap.tmx</PackagePath>
-      <Modified>2018-02-06T11:15:09.035</Modified>
+      <Modified>2018-02-06T12:05:22.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\index.html">
       <PackagePath>index.html</PackagePath>
@@ -144,15 +164,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2018-02-06T08:37:47.933</Modified>
+      <Modified>2018-02-06T12:05:22.065</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\load.js">
       <PackagePath>js\load.js</PackagePath>
-      <Modified>2018-02-06T11:26:14.142</Modified>
+      <Modified>2018-02-06T12:55:52.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\menu.js">
       <PackagePath>js\menu.js</PackagePath>
-      <Modified>2018-02-06T11:42:50.548</Modified>
+      <Modified>2018-02-06T12:05:22.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\phaser.js">
       <PackagePath>js\phaser.js</PackagePath>
@@ -160,7 +180,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\play.js">
       <PackagePath>js\play.js</PackagePath>
-      <Modified>2018-02-06T11:36:16.682</Modified>
+      <Modified>2018-02-06T13:01:47.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\js\lose.js">
       <PackagePath>js\lose.js</PackagePath>
@@ -177,7 +197,7 @@
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-06T11:16:13.020</Modified>
+      <Modified>2018-02-06T12:25:49.565</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
