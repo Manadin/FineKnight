@@ -52,6 +52,19 @@ var playState = {
         this.player.body.gravity.y = 25000;
         this.player.checkWorldBounds = true;
         this.player.outOfBoundsKill = true;
+
+        //Enemies
+        enemies = game.add.group();
+        game.physics.enable(enemies, Phaser.Physics.ARCADE);
+        enemies.enableBody = true;
+
+        for (var i = 0; i < 5; i++) {
+            var enemy = enemies.create(game.world.randomX, game.world.randomY, 'skeleton', i);
+            enemy.animations.add('move', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, true);
+            enemy.body.gravity.y = 100;
+
+
+        }
                 
         //// Create a tilesprite (x, y, width, height, key)
         //this.map = game.add.tileSprite(0, 0, 800, 600, 'map');
