@@ -7,7 +7,7 @@
 // as x and y values. We are setting it to 640 pixels accross,
 // and 480 pixels down. Note also that the 'gameDiv' parameter matches the
 // div element defined in our index.html file.
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameDiv');
+var game = new Phaser.Game(800, 640, Phaser.AUTO, 'gameDiv');
 
 // Here we add each state. We give it a casual name when calling it
 // ('boot') and an official name when defining it (bootState).
