@@ -21,12 +21,54 @@ var playState = {
         downKey     =   game.input.keyboard.addKey(Phaser.Keyboard.S);
         rightKey    =   game.input.keyboard.addKey(Phaser.Keyboard.D);
         leftKey     =   game.input.keyboard.addKey(Phaser.Keyboard.A);
-        
+
+        //this.map = this.game.add.tilemap('Map1');
+
+        //// The first parameter is the tileset name as specified in Tiled, the second is the key to the asset
+        //this.map.addTilesetImage('RuinMap', 'Tiles');
+
+        // Create layer
+        //this.backgroundLayer = this.map.createLayer('Background');
+        //this.foregroundLayer = this.map.createLayer('Foreground');
+        //this.platformsBackLayer = this.map.createLayer('PlatformsBack');
+       
+        //// Create top layers
+        //this.platformsFrontLayer = this.map.createLayer('PlatformsFront');
+        //this.collisionLayer = this.map.createLayer('Collision');
+
+        // Set collision
+        //this.map.setCollisionBetween(1, 2600, true, 'Collision');
+
+        //resizes the game world to match the layer dimensions
+        //this.backgroundlayer.resizeWorld();    
+
+        //Create the background
+        skies = game.add.tileSprite(0, 0, 800, 640, 'background');
+
         // Create the win sprite and enable physics.
-        this.win = game.add.sprite(game.world.width - 50, game.world.height - 60, 'win');
+        this.win = game.add.sprite(game.world.width - 50, game.world.height - 600, 'win');
         game.physics.enable(this.win, Phaser.Physics.ARCADE);
 
+        // Create the player sprite and enable physics.
+        this.player = game.add.sprite(16, game.world.height - 80, 'player');
+        game.physics.enable(this.player, Phaser.Physics.ARCADE);
+        this.player.body.gravity.y = 25000;
+        this.player.checkWorldBounds = true;
+        this.player.outOfBoundsKill = true;
 
+        //Enemies
+        enemies = game.add.group();
+        game.physics.enable(enemies, Phaser.Physics.ARCADE);
+        enemies.enableBody = true;
+
+        for (var i = 0; i < 5; i++) {
+            var enemy = enemies.create(game.world.randomX, game.world.randomY, 'skeleton', i);
+            enemy.animations.add('move', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, true);
+            enemy.body.gravity.y = 100;
+
+
+        }
+                
         //// Create a tilesprite (x, y, width, height, key)
         //this.map = game.add.tileSprite(0, 0, 800, 600, 'map');
 
@@ -36,6 +78,18 @@ var playState = {
 
         var ground;
 
+        // 8 tiles next to each other
+        for (var d = 0; d < 8; d++) {
+            ground = platforms.create(game.world.width - 150 + (d * 16), game.world.height - 200, 'stoneTile');
+            ground.scale.setTo(1, 1);
+            ground.body.immovable = true;
+
+            ground = platforms.create(game.world.width - 300 + (d * 16), game.world.height - 250, 'stoneTile');
+            ground.scale.setTo(1, 1);
+            ground.body.immovable = true;
+        }
+        
+        // 15 tiles next to each other
         for (var i = 0; i < 15; i++){
             ground = platforms.create(i*16, game.world.height - 30, 'stoneTile');
             ground.scale.setTo(1, 1);
@@ -44,47 +98,34 @@ var playState = {
             ground = platforms.create(game.world.width - 250 + (i*16), game.world.height - 30, 'stoneTile');
             ground.scale.setTo(1, 1);
             ground.body.immovable = true;
+
+            ground = platforms.create(game.world.width - 250 + (i * 16), game.world.height - 580, 'stoneTile');
+            ground.scale.setTo(1, 1);
+            ground.body.immovable = true;
         }
-        //Enemies
-        enemies = game.add.group();
-        game.physics.enable(enemies, Phaser.Physics.ARCADE);
-        enemies.enableBody = true;
-
-        for (var i = 0; i < 5; i++)
-        {
-            var enemy = enemies.create(game.world.randomX, game.world.randomY, 'skeleton',i);
-            enemy.animations.add('move', [0,1,2,3,4,5,6,7,8,9,10,11,12], 12, true);
-            enemy.body.gravity.y = 100;
-
-
-        }
-
-        // Create the player sprite and enable physics.
-        this.player = game.add.sprite(16, game.world.height - 80, 'player');
-        game.physics.enable(this.player, Phaser.Physics.ARCADE);
-        this.player.body.gravity.y = 25000;
-        this.player.checkWorldBounds = true;
-        this.player.outOfBoundsKill = true;
-
-
-        text = game.add.text(16, 16, 'test', {fontSize: '32px', fill: '#ffffff'})
     },
 
     update: function() {
 
+        // Collision
+        //this.game.physics.arcade.collide(this.player, this.collisionLayer);
+
+        //Move the skies left
+        skies.tilePosition.x -= 0.5;
+
         // When the player sprite and sprite overlap, the win function
         // is called.
         game.physics.arcade.overlap(this.player, this.win, this.Win, null, this);
-
+      
         if (!this.player.exists) {
             this.lose(this);
         }
+      
         //Collision with ground
         var hitPlatform = game.physics.arcade.collide(this.player, platforms);
         game.physics.arcade.collide(enemies, platforms);
         this.player.body.velocity.x = 0;
         this.player.body.velocity.y = 0;
-
 
         enemies.forEach(function(enemy) {
             if(enemyTimer<100&&enemyTimer>0){

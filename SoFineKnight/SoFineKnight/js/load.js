@@ -13,8 +13,12 @@ var loadState = {
                                         {font: '30px Courier', fill: '#ffffff'});
 
         // Load all assests.
+        //game.load.tilemap('Map1', 'images/Map/tilemaps/FineKnightMap.json', null, Phaser.TILEMAP.TILED_JSON);
+        //game.load.image('Tiles', 'images/Map/images/RuinMap.png');
+        //game.load.image('Collision', 'images/Map/images/collision.png');
         game.load.image('player', 'images/player.png');
         game.load.image('win', 'images/win.png');
+        game.load.image('background', 'images/Map/SKIES.png')
         game.load.image('stoneTile', 'images/Map/singularRock.png');
         game.load.spritesheet('skeleton', 'images/Enemy/Skeleton Walk.png', 22, 33);
     },

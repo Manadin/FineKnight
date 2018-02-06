@@ -7,9 +7,12 @@ images\Enemy\Skeleton React.png
 images\Enemy\Skeleton Walk.png
 images\Hero\KnightSheet.png
 images\LockScreenLogo.scale-200.png
-images\Map\GameMap.png
-images\Map\RuinMap.png
+images\Map\images\collision.png
+images\Map\images\RuinMap.png
 images\Map\singularRock.png
+images\Map\SKIES.png
+images\Map\tilemaps\FineKnightMap.json
+images\Map\tilemaps\FineKnightMap.tmx
 images\player.png
 images\SplashScreen.scale-200.png
 images\Square150x150Logo.scale-200.png
