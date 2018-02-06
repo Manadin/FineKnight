@@ -58,6 +58,9 @@
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Enemy\Skeleton Walk.png">
       <PackagePath>images\Enemy\Skeleton Walk.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Hero\Hero.png">
+      <PackagePath>images\Hero\Hero.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\images\Hero\KnightSheet.png">
       <PackagePath>images\Hero\KnightSheet.png</PackagePath>
     </AppxPackagedFile>

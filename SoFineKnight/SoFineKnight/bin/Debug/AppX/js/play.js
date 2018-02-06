@@ -13,7 +13,7 @@ var text;
 var enemyTimer=1;
 var playState = {
     
-    create: function() {
+    create: function () {
 
         // Prepare the keyboard so that the human player can move.
         this.keyboard = game.input.keyboard;
@@ -55,6 +55,7 @@ var playState = {
 
         // Create the player sprite and enable physics.
         this.player = game.add.sprite(16, game.world.height - 80, 'knight');
+        this.player.anchor.setTo(.5, .5);
         game.physics.enable(this.player, Phaser.Physics.ARCADE);
         this.player.body.gravity.y = 25000;
         this.player.body.collideWorldBounds = true;
@@ -62,10 +63,10 @@ var playState = {
         this.player.outOfBoundsKill = true;
         
         // Load player animations
-        this.player.animations.add('idle', [7, 8, 9, 10], 4, true);
-        this.player.animations.add('walk', [22, 23, 24, 25, 26, 27, 28, 29], 5, true);
-        //this.player.animations.add('death', [11, 12, 13, 14, 15, 16, 17, 18, 19], 2, false);
-        //this.player.animations.add('block', [0, 1, 2, 3, 4, 5, 6], 2, false);
+        this.player.animations.add('idle', [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 12, true);
+        this.player.animations.add('walk', [0, 1, 2, 3, 4, 5, 6, 7], 12, true);
+        ////this.player.animations.add('death', [11, 12, 13, 14, 15, 16, 17, 18, 19], 2, false);
+        ////this.player.animations.add('block', [0, 1, 2, 3, 4, 5, 6], 2, false);
         this.player.animations.play("idle");
 
         // Enemies
@@ -77,8 +78,6 @@ var playState = {
             var enemy = enemies.create(game.world.randomX, game.world.randomY, 'skeleton', w);
             enemy.animations.add('move', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, true);
             enemy.body.gravity.y = 100;
-
-
         }
 
         // Play music
@@ -98,7 +97,7 @@ var playState = {
 
         var ground;
 
-        // 8 tiles next to each other
+        // 4 tiles next to each other
         for (var d = 0; d < 4; d++) {
             //Platform 1
             ground = platforms.create(game.world.width - 750 + (d * 16), game.world.height - 600, 'stoneTile');
@@ -122,21 +121,21 @@ var playState = {
 
 
         // 8 tiles next to each other
-        for (var d = 0; d < 8; d++) {
+        for (var s = 0; s < 8; s++) {
             //Platform 1
-            ground = platforms.create(game.world.width - 150 + (d * 16), game.world.height - 200, 'stoneTile');
+            ground = platforms.create(game.world.width - 150 + (s * 16), game.world.height - 200, 'stoneTile');
             ground.scale.setTo(1, 1);
             ground.body.immovable = true;
             //Platform 2
-            ground = platforms.create(game.world.width - 300 + (d * 16), game.world.height - 250, 'stoneTile');
+            ground = platforms.create(game.world.width - 300 + (s * 16), game.world.height - 250, 'stoneTile');
             ground.scale.setTo(1, 1);
             ground.body.immovable = true;
             //Platform 3
-            ground = platforms.create(game.world.width - 600 + (d * 16), game.world.height - 250, 'stoneTile');
+            ground = platforms.create(game.world.width - 600 + (s * 16), game.world.height - 250, 'stoneTile');
             ground.scale.setTo(1, 1);
             ground.body.immovable = true;
             //Platform 4
-            ground = platforms.create(game.world.width - 700 + (d * 16), game.world.height - 500, 'stoneTile');
+            ground = platforms.create(game.world.width - 700 + (s * 16), game.world.height - 500, 'stoneTile');
             ground.scale.setTo(1, 1);
             ground.body.immovable = true;
 
@@ -163,8 +162,8 @@ var playState = {
         }
     },
 
-    update: function() {
-
+    update: function () {
+        
         // Collision
         //this.game.physics.arcade.collide(this.player, this.collisionLayer);
 
