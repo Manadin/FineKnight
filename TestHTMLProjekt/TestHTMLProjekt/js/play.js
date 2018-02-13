@@ -66,8 +66,11 @@ var playState = {
         game.physics.arcade.checkCollision.left = false;
 
         // Create the win sprite and enable physics.
-        this.win = game.add.sprite(levelData.winStart.x, levelData.winStart.y, 'win');
+        this.win = game.add.sprite(levelData.winStart.x, levelData.winStart.y, 'princess');
         game.physics.enable(this.win, Phaser.Physics.ARCADE);
+
+        this.win.animations.add('princ_idle', [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11], 10, true);
+        this.win.animations.play("princ_idle");
 
 
         // Create the player sprite and enable physics.

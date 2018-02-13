@@ -12,3 +12,10 @@ C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug
 C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.dll
 C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.pdb
 C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csprojResolveAssemblyReference.cache
+C:\Users\pgilk\Documents\GIT Folder\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll.config
+C:\Users\pgilk\Documents\GIT Folder\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll
+C:\Users\pgilk\Documents\GIT Folder\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.pdb
+C:\Users\pgilk\Documents\GIT Folder\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csprojResolveAssemblyReference.cache
+C:\Users\pgilk\Documents\GIT Folder\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csproj.CoreCompileInputs.cache
+C:\Users\pgilk\Documents\GIT Folder\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.dll
+C:\Users\pgilk\Documents\GIT Folder\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.pdb
