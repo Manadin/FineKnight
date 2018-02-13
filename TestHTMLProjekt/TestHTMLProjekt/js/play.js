@@ -39,12 +39,19 @@ var playState = {
         map = game.add.tilemap('level' + currentLevel);
         map.addTilesetImage('RuinMap', 'mapTiles');
         map.addTilesetImage('collision', 'mapCollision');
+        
 
         // Create layers
         this.backgroundLayer = map.createLayer('Background');
         this.movingBackgroundLayer = map.createLayer('MovingBackground');
+
+        // Moving background
+        movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'MovingBackground');
+
         this.foregroundBackLayer = map.createLayer('ForegroundBack');
         this.foregroundFrontLayer = map.createLayer('ForegroundFront');
+
+        
 
         // Create collision
         collisionLayer = map.createLayer('Collision');
@@ -124,7 +131,7 @@ var playState = {
         text.setText('Deaths: ' + death);
 
         //Move the skies left
-        //this.movingBackgroundLayer.x -= 0.5;
+        movingBackground.tilePosition.x -= 0.5;
 
         // When the player sprite and win sprite overlap, the win function
         // is called.
@@ -218,7 +225,6 @@ var playState = {
 
         death = 0;
         currentLevel<4?currentLevel++:currentLevel=1;
-        //currentLevel<4?currentLevel++:currentLevel=1;
         music.loop = false;
         music.stop();
         gotItem.play();
