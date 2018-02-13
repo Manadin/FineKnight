@@ -78,6 +78,7 @@
     <Content Include="images\Map\tilemaps\MapDavid.json" />
     <Content Include="images\Map\tilemaps\NewMapMads.json" />
     <Content Include="images\Map\tilemaps\taric.json" />
+    <Content Include="images\Map\tilemaps\pawsMap.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

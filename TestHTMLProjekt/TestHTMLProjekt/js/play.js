@@ -46,7 +46,7 @@ var playState = {
         this.movingBackgroundLayer = map.createLayer('MovingBackground');
 
         // Moving background
-        movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'MovingBackground');
+        //movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'MovingBackground');
 
         this.foregroundBackLayer = map.createLayer('ForegroundBack');
         this.foregroundFrontLayer = map.createLayer('ForegroundFront');
@@ -131,7 +131,7 @@ var playState = {
         text.setText('Deaths: ' + death);
 
         //Move the skies left
-        movingBackground.tilePosition.x -= 0.5;
+        //movingBackground.tilePosition.x -= 0.5;
 
         // When the player sprite and win sprite overlap, the win function
         // is called.
