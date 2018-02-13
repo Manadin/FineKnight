@@ -19,8 +19,8 @@ var loadState = {
         game.load.image('mapCollision', 'images/Map/images/collision.png');   
         
         // TileMaps
-        this.load.text('data1', 'images/Map/tilemaps/MapDavid.json');
-        game.load.tilemap('level1', 'images/Map/tilemaps/MapDavid.json', null, Phaser.Tilemap.TILED_JSON);
+        this.load.text('data1', 'images/Map/tilemaps/MapDavid2.json');
+        game.load.tilemap('level1', 'images/Map/tilemaps/MapDavid2.json', null, Phaser.Tilemap.TILED_JSON);
 
         // Spritesheets
         game.load.spritesheet('skeleton', 'images/Enemy/Skeleton Walk.png', 22, 33);

@@ -76,6 +76,7 @@
     <Content Include="bld\Debug\resources.resfiles.intermediate" />
     <Content Include="bld\Debug\Tsc.out" />
     <Content Include="images\Map\tilemaps\MapDavid.json" />
+    <Content Include="images\Map\tilemaps\MapDavid2.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
