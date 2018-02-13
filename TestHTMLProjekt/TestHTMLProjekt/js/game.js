@@ -20,13 +20,4 @@ game.state.add('lose', loseState);
 
 // After all the states are added, we start the game by calling boot state.
 game.state.start('boot');
-/*{ "height": 135,
- "playerStart": {
-  "x": 744,
-  "y": 900
- },
- "winStart": {
-  "x": 792,
-  "y": 24
- },*/
 

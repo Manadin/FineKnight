@@ -44,9 +44,6 @@ var playState = {
         this.backgroundLayer = map.createLayer('Background');
         this.movingBackgroundLayer = map.createLayer('MovingBackground');
         this.foregroundBackLayer = map.createLayer('ForegroundBack');
-
-
-        // Create the layers in front of the player
         this.foregroundFrontLayer = map.createLayer('ForegroundFront');
 
         // Create collision
@@ -89,14 +86,11 @@ var playState = {
         game.physics.enable(enemies, Phaser.Physics.ARCADE);
         enemies.enableBody = true;
 
-        for (var w = 0; w < 10; w++) {
-            var enemy = enemies.create(game.world.randomX, w*35, 'skeleton', w);
+        levelData.enemyStart.forEach(function (element) {
+            var enemy = enemies.create(element.x, element.y, 'skeleton');
             enemy.animations.add('move', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, true);
             enemy.body.gravity.y = 100;
-            //enemy.body.velocity.x = 75;
-
-
-        }
+        }, this);
 
         // Play music
         music = game.add.audio('boden');
@@ -106,13 +100,18 @@ var playState = {
 
         music.play();
 
-        text = game.add.text(16, 16, 'deathCounter', { fontsize: '32px', fill: '#ffffff' });
-        game.forceSingleUpdate = true;
+        // Death counter
+        text = game.add.text(levelData.deathText.x, levelData.deathText.y, 'deathCounter', { fontsize: '32px', fill: '#ffffff' });
+
+        //game.forceSingleUpdate = true;
 
         game.camera.follow(player);
     },
 
     update: function () {
+
+        // Music for the game
+        music.loop = true;
 
         player.body.velocity.x = 0;
         player.body.velocity.y = 0;
@@ -127,7 +126,7 @@ var playState = {
         //Move the skies left
         //this.movingBackgroundLayer.x -= 0.5;
 
-        // When the player sprite and sprite overlap, the win function
+        // When the player sprite and win sprite overlap, the win function
         // is called.
         game.physics.arcade.overlap(player, this.win, this.Win, null, this);
 
@@ -137,12 +136,12 @@ var playState = {
 
         //Enemies
         enemies.forEach(function (enemy) {
-            if (enemyTimer < 100 && enemyTimer > 0) {
+            if (enemyTimer < 60 && enemyTimer > 0) {
                 enemy.body.velocity.x = 100;
                 enemy.scale.x = 1;
 
-            } else if (enemyTimer > 100) {
-                enemyTimer = -99;
+            } else if (enemyTimer > 60) {
+                enemyTimer = -59;
             } else {
                 enemy.body.velocity.x = -100;
                 enemy.scale.x = -1;
@@ -219,6 +218,7 @@ var playState = {
 
         death = 0;
         //currentLevel<4?currentLevel++:currentLevel=1;
+        music.loop = false;
         music.stop();
         gotItem.play();
 
@@ -227,7 +227,8 @@ var playState = {
     lose: function () {
         game.state.start('lose');
         death++;
+        music.loop = false;
         music.stop();
-        deathSound.play();
+        deathSound.play()
     }
 };
