@@ -1,4 +1,4 @@
-var Greeter = /** @class */ (function () {
+var Greeter = (function () {
     function Greeter(element) {
         this.element = element;
         this.element.innerHTML += "The time is: ";

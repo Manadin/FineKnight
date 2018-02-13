@@ -13,15 +13,20 @@ var loadState = {
                                         {font: '30px Courier', fill: '#ffffff'});
 
         // Load all assests.
-        //game.load.tilemap('Map1', 'images/Map/tilemaps/FineKnightMap.json', null, Phaser.TILEMAP.TILED_JSON);
-        //game.load.image('Tiles', 'images/Map/images/RuinMap.png');
-        //game.load.image('Collision', 'images/Map/images/collision.png');
-        game.load.image('player', 'images/player.png');
+        // Images
         game.load.image('win', 'images/win.png');
-        game.load.image('background', 'images/Map/SKIES.png')
-        game.load.image('stoneTile', 'images/Map/singularRock.png');
+        game.load.image('mapTiles', 'images/Map/images/RuinMap.png');
+        game.load.image('mapCollision', 'images/Map/images/collision.png');   
+        
+        // TileMaps
+        this.load.text('data1', 'images/Map/tilemaps/MapDavid.json');
+        game.load.tilemap('level1', 'images/Map/tilemaps/MapDavid.json', null, Phaser.Tilemap.TILED_JSON);
+
+        // Spritesheets
         game.load.spritesheet('skeleton', 'images/Enemy/Skeleton Walk.png', 22, 33);
-        game.load.spritesheet('knight', 'images/Hero/Hero.png', 21, 34, 24);
+        game.load.spritesheet('hero', 'images/Hero/Hero.png', 21, 34, 24);
+
+        // Audio
         game.load.audio('boden', 'Audio/bodenstaendig_2000_in_rock_4bit.mp3');
         game.load.audio('death', 'Audio/gta_5_death.mp3');
         game.load.audio('jump', 'Audio/Jump.wav');

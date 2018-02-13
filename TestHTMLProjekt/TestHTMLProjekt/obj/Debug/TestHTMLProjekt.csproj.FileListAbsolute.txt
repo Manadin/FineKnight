@@ -5,3 +5,10 @@ c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLPr
 c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csproj.CoreCompileInputs.cache
 c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.dll
 c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.pdb
+C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll.config
+C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll
+C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.pdb
+C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csprojResolveAssemblyReference.cache
+C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csproj.CoreCompileInputs.cache
+C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.dll
+C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.pdb

@@ -21,7 +21,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
     <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -62,10 +62,6 @@
     <Content Include="bld\Debug\qualifiers.txt" />
     <Content Include="bld\Debug\SoFineKnight.jsproj.FileListAbsolute.txt" />
     <Content Include="css\default.css" />
-    <Content Include="images\Map\singularRock.png" />
-    <Content Include="images\Map\SKIES.png" />
-    <Content Include="images\Map\tilemaps\FineKnightMap.json" />
-    <Content Include="images\Map\tilemaps\FineKnightMap.tmx" />
     <Content Include="bld\Debug\winrtrefs\winrt2ts.rsp" />
     <Content Include="bld\Debug\embed.resfiles" />
     <Content Include="bld\Debug\embed.resfiles.intermediate" />
@@ -79,6 +75,7 @@
     <Content Include="bld\Debug\resources.resfiles" />
     <Content Include="bld\Debug\resources.resfiles.intermediate" />
     <Content Include="bld\Debug\Tsc.out" />
+    <Content Include="images\Map\tilemaps\MapDavid.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
