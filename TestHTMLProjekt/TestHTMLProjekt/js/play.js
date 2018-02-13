@@ -19,7 +19,7 @@ var text = 0;
 var death = 0;
 var collision_tiles = [];
 
-var currentLevel = 4;
+var currentLevel = 1;
 var totalLevels = 4;
 
 var levelData;
@@ -218,7 +218,7 @@ var playState = {
         game.state.start('win');
 
         death = 0;
-
+        //currentLevel<4?currentLevel++:currentLevel=1;
         music.stop();
         gotItem.play();
 
