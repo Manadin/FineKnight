@@ -22,6 +22,9 @@ var loadState = {
         this.load.text('data1', 'images/Map/tilemaps/MapDavid.json');
         game.load.tilemap('level1', 'images/Map/tilemaps/MapDavid.json', null, Phaser.Tilemap.TILED_JSON);
 
+        this.load.text('data4', 'images/Map/tilemaps/taric.json');
+        game.load.tilemap('level4', 'images/Map/tilemaps/taric.json', null, Phaser.Tilemap.TILED_JSON);
+
         // Spritesheets
         game.load.spritesheet('skeleton', 'images/Enemy/Skeleton Walk.png', 22, 33);
         game.load.spritesheet('hero', 'images/Hero/Hero.png', 21, 34, 24);

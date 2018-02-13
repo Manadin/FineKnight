@@ -19,7 +19,7 @@ var text = 0;
 var death = 0;
 var collision_tiles = [];
 
-var currentLevel = 1;
+var currentLevel = 4;
 var totalLevels = 4;
 
 var levelData;
