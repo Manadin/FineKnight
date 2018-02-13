@@ -1,0 +1,7 @@
+c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll.config
+c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll
+c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.pdb
+c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csprojResolveAssemblyReference.cache
+c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csproj.CoreCompileInputs.cache
+c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.dll
+c:\users\pgilk\source\repos\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.pdb

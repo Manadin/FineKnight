@@ -1,0 +1,51 @@
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bin\Debug\SoFineKnight.build.appxrecipe
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\SoFineKnight.jsproj.CoreCompileInputs.cache
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\ResourceHandlingTask.state
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+F:\Skole opgaver\UCN\GameDev\Visual studio\SoFineKnight\SoFineKnight\bld\Debug\ProjectArchitectures.txt
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\SoFineKnight.build.appxrecipe
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\SoFineKnight.jsproj.CoreCompileInputs.cache
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\ResourceHandlingTask.state
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt.intermediate
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\ProjectArchitectures.txt
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bin\Debug\SoFineKnight.build.appxrecipe
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\SoFineKnight.jsproj.CoreCompileInputs.cache
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\ResourceHandlingTask.state
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml.intermediate
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles.intermediate
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles.intermediate
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles.intermediate
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt.intermediate
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\pgilk\Desktop\FineKnight-master\SoFineKnight\SoFineKnight\bld\Debug\ProjectArchitectures.txt
