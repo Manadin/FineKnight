@@ -44,6 +44,9 @@ var playState = {
         this.backgroundLayer = map.createLayer('Background');
         this.movingBackgroundLayer = map.createLayer('MovingBackground');
         this.foregroundBackLayer = map.createLayer('ForegroundBack');
+
+
+        // Create the layers in front of the player
         this.foregroundFrontLayer = map.createLayer('ForegroundFront');
 
         // Create collision
@@ -62,12 +65,13 @@ var playState = {
         this.win = game.add.sprite(levelData.winStart.x, levelData.winStart.y, 'win');
         game.physics.enable(this.win, Phaser.Physics.ARCADE);
 
+
         // Create the player sprite and enable physics.
         player = game.add.sprite(levelData.playerStart.x, levelData.playerStart.y, 'hero');
         player.anchor.setTo(.5, .5);
 
         game.physics.enable(player, Phaser.Physics.ARCADE);
-        player.body.gravity.y = 25000;
+        player.body.gravity.y = 18000;
         player.body.collideWorldBounds = true;
         player.checkWorldBounds = true;
         player.outOfBoundsKill = true;
@@ -75,6 +79,9 @@ var playState = {
         // Load player animations
         player.animations.add('idle', [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 12, true);
         player.animations.add('walk', [0, 1, 2, 3, 4, 5, 6, 7], 12, true);
+        player.animations.add('jump', [1, 2], 2, false);
+        player.animations.add('inAir', [3], 2, true);
+        player.animations.add('falling', [4], 2, true);
         player.animations.play("idle");
 
         // Enemies
@@ -118,7 +125,7 @@ var playState = {
         text.setText('Deaths: ' + death);
 
         //Move the skies left
-        //this.movingBackgroundLayer.tilePosition.x -= 0.5;
+        //this.movingBackgroundLayer.x -= 0.5;
 
         // When the player sprite and sprite overlap, the win function
         // is called.
@@ -151,9 +158,10 @@ var playState = {
 
         // Finally, we give the human player a means to move the sprite.
         // Enabling x-axis movement:
-        var speed = 400;
+        var speed = 350;
         //player.body.maxVelocity = 400;
 
+        // Left Key = A
         if (leftKey.isDown) {
             //player.body.velocity.x = 0;
            // player..body.velocity = 400;
@@ -162,6 +170,7 @@ var playState = {
             player.animations.play("walk");
             player.scale.x = -1;
         }
+        // Right Key = D
         else if (rightKey.isDown) {
             //player.body.velocity.x = 0;
             //player.body.velocity = 400;
@@ -174,23 +183,31 @@ var playState = {
             player.body.velocity.x = 0;
         }
 
-        //Enabling y-axis movement;
+        // Enabling y-axis movement;
+        // Up Key = W
         if (upKey.isDown) {
             if (player.body.onFloor() && jumpTimer === 0) {
-                player.body.velocity.y = -1000;
+                player.body.velocity.y = -625;
                 jumpTimer = 1;
-            } else if (jumpTimer > 0 && jumpTimer < 20) {
+                player.animations.play("jump");
+            } else if (jumpTimer > 0 && jumpTimer < 30) {
                 jumpTimer++;
-                player.body.velocity.y = -1000 + (jumpTimer * 5)
+                player.body.velocity.y = -625 + (jumpTimer * 5)
+                player.animations.play("inAir");
+            } else if (player.body.velocity.y > 0){
+                player.animations.play("falling");
             }
-        } else {
+        }
+        else {
             jumpTimer = 0;
         }
 
-        if (downKey.isDown) {
-            player.body.velocity.y = 400;
-        }
-        if (downKey.isUp && upKey.isUp && rightKey.isUp && leftKey.isUp) {
+        // Down Key = S
+        //if (downKey.isDown) {
+        //    player.body.velocity.y = 400;
+        //}
+
+        if (player.body.velocity.x === 0 && player.body.velocity.y === 0) {
             player.animations.play("idle");
         }
     },
