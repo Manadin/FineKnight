@@ -22,6 +22,12 @@ var loadState = {
         this.load.text('data1', 'images/Map/tilemaps/MapDavid.json');
         game.load.tilemap('level1', 'images/Map/tilemaps/MapDavid.json', null, Phaser.Tilemap.TILED_JSON);
 
+        this.load.text('data2', 'images/Map/tilemaps/pawsMap.json');
+        game.load.tilemap('level2', 'images/Map/tilemaps/pawsMap.json', null, Phaser.Tilemap.TILED_JSON);
+
+        this.load.text('data3', 'images/Map/tilemaps/NewMapMads.json');
+        game.load.tilemap('level3', 'images/Map/tilemaps/NewMapMads.json', null, Phaser.Tilemap.TILED_JSON);
+
         this.load.text('data4', 'images/Map/tilemaps/taric.json');
         game.load.tilemap('level4', 'images/Map/tilemaps/taric.json', null, Phaser.Tilemap.TILED_JSON);
 

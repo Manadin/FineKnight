@@ -217,6 +217,7 @@ var playState = {
         game.state.start('win');
 
         death = 0;
+        currentLevel<4?currentLevel++:currentLevel=1;
         //currentLevel<4?currentLevel++:currentLevel=1;
         music.loop = false;
         music.stop();
