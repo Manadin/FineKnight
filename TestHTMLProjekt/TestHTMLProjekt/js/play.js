@@ -131,8 +131,8 @@ var playState = {
         // Death counter
         text.setText('Deaths: ' + death);
         
-        // When the player sprite and win sprite overlap, the win function
-        // is called.
+        // When the player sprite and win sprite overlap, the nextLevel function
+        // is called. win all maps are finished the win function is called
         if (currentLevel < 4) {
             game.physics.arcade.overlap(player, this.win, this.NextLevel, null, this);
         } else if (currentLevel = 4) {
@@ -224,7 +224,7 @@ var playState = {
     NextLevel: function () {
         // We start the next level state
         game.state.start('nextLevel');
-        currentLevel < 4 ? currentLevel++ : currentLevel = 1;
+        currentLevel++;
         music.loop = false;
         music.stop();
         gotItem.play();
