@@ -6,11 +6,6 @@
 var winState = {
 
     create: function() {
-        var princess = game.add.sprite(200, 200, "princess");
-        game.physics.enable(princess, Phaser.Physics.ARCADE);
-        princess.animations.add('princ_idle', [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11], 10, true);
-        princess.animations.play("princ_idle");
-
 
         var winLabel = game.add.text(80, 80, 'YOU WON!', 
                                     {font: '50px Arial', fill: '#00ff00'});

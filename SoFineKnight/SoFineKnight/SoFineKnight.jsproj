@@ -97,6 +97,7 @@
     <Content Include="js\load.js" />
     <Content Include="js\lose.js" />
     <Content Include="js\menu.js" />
+    <Content Include="js\nextLevel.js" />
     <Content Include="js\phaser.js" />
     <Content Include="js\play.js" />
     <Content Include="js\win.js" />

@@ -131,9 +131,14 @@ var playState = {
         // Death counter
         text.setText('Deaths: ' + death);
         
-        // When the player sprite and win sprite overlap, the win function
-        // is called.
-        game.physics.arcade.overlap(player, this.win, this.Win, null, this);
+        // When the player sprite and win sprite overlap, the nextLevel function
+        // is called. When all maps are finished the win function is called
+        if (currentLevel < 4) {
+            game.physics.arcade.overlap(player, this.win, this.NextLevel, null, this);
+        } else if (currentLevel = 4) {
+            game.physics.arcade.overlap(player, this.win, this.Win, null, this);
+        }
+        
 
         if (!player.exists) {
             this.lose(this);
@@ -163,22 +168,15 @@ var playState = {
         // Finally, we give the human player a means to move the sprite.
         // Enabling x-axis movement:
         var speed = 350;
-        //player.body.maxVelocity = 400;
 
         // Left Key = A
         if (leftKey.isDown) {
-            //player.body.velocity.x = 0;
-           // player..body.velocity = 400;
-            //player.body.velocity.x = -400;
             player.body.velocity.x = -speed;
             player.animations.play("walk");
             player.scale.x = -1;
         }
         // Right Key = D
         else if (rightKey.isDown) {
-            //player.body.velocity.x = 0;
-            //player.body.velocity = 400;
-            //player.body.velocity.x = 400;
             player.body.velocity.x = speed;
             player.animations.play("walk");
             player.scale.x = 1;
@@ -216,17 +214,25 @@ var playState = {
         }
     },
 
+    NextLevel: function () {
+        // We start the next level state
+        game.state.start('nextLevel');
+        currentLevel++;
+        music.loop = false;
+        music.stop();
+        gotItem.play();
+    },
+
     Win: function () {
 
         // We start the win state
         game.state.start('win');
 
         death = 0;
-        currentLevel<4?currentLevel++:currentLevel=1;
+        currentLevel = 1;
         music.loop = false;
         music.stop();
         gotItem.play();
-
     },
 
     lose: function () {
