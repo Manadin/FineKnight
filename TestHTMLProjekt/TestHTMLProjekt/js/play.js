@@ -134,7 +134,7 @@ var playState = {
         // When the player sprite and win sprite overlap, the nextLevel function
         // is called. When all maps are finished the win function is called
         if (currentLevel < 4) {
-            game.physics.arcade.overlap(player, this.win, this.NextLevel, null, this);
+            game.physics.arcade.overlap(player, this.win, this.NextLvl, null, this);
         } else if (currentLevel = 4) {
             game.physics.arcade.overlap(player, this.win, this.Win, null, this);
         }
@@ -214,7 +214,7 @@ var playState = {
         }
     },
 
-    NextLevel: function () {
+    NextLvl: function () {
         // We start the next level state
         game.state.start('nextLevel');
         currentLevel++;

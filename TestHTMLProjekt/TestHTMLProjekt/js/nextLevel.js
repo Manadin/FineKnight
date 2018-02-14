@@ -1,7 +1,7 @@
 ﻿// Purpose of this file:
 // 1. Intermediate to next level
 
-var nextLevelState = {
+var nextlevelState = {
 
     create: function () {
         var nextLabel = game.add.text(80, 80, 'You are great! But you are not done yet!',
