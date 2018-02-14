@@ -133,7 +133,12 @@ var playState = {
         
         // When the player sprite and win sprite overlap, the win function
         // is called.
-        game.physics.arcade.overlap(player, this.win, this.Win, null, this);
+        if (currentLevel < 4) {
+            game.physics.arcade.overlap(player, this.win, this.NextLevel, null, this);
+        } else if (currentLevel = 4) {
+            game.physics.arcade.overlap(player, this.win, this.Win, null, this);
+        }
+        
 
         if (!player.exists) {
             this.lose(this);
@@ -216,17 +221,25 @@ var playState = {
         }
     },
 
+    NextLevel: function () {
+        // We start the next level state
+        game.state.start('nextLevel');
+        currentLevel < 4 ? currentLevel++ : currentLevel = 1;
+        music.loop = false;
+        music.stop();
+        gotItem.play();
+    },
+
     Win: function () {
 
         // We start the win state
         game.state.start('win');
 
         death = 0;
-        currentLevel<4?currentLevel++:currentLevel=1;
+        currentLevel = 1;
         music.loop = false;
         music.stop();
         gotItem.play();
-
     },
 
     lose: function () {
