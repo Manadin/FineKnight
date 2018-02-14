@@ -11,4 +11,3 @@ C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeS
 C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csproj.CoreCompileInputs.cache
 C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.dll
 C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.pdb
-C:\Users\David\Source\Repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TestHTMLProjekt.csprojResolveAssemblyReference.cache

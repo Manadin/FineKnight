@@ -39,22 +39,19 @@ var playState = {
         map = game.add.tilemap('level' + currentLevel);
         map.addTilesetImage('RuinMap', 'mapTiles');
         map.addTilesetImage('collision', 'mapCollision');
-        
 
         // Create layers
         this.backgroundLayer = map.createLayer('Background');
-        this.movingBackgroundLayer = map.createLayer('MovingBackground');
 
-        // Moving background
-        //movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'MovingBackground');
+        // Moving background in front of background and behind everything else
+        movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'sky');
 
+        // Rest of the layers
         this.foregroundBackLayer = map.createLayer('ForegroundBack');
-        this.foregroundFrontLayer = map.createLayer('ForegroundFront');
-
-        
+        this.foregroundFrontLayer = map.createLayer('ForegroundFront');        
+        collisionLayer = map.createLayer('Collision');
 
         // Create collision
-        collisionLayer = map.createLayer('Collision');
         this.collisionLayer = collisionLayer
         map.setCollisionByExclusion([], true, this.collisionLayer);
         collisionLayer.visible = false;
@@ -69,11 +66,9 @@ var playState = {
         this.win = game.add.sprite(levelData.winStart.x, levelData.winStart.y, 'win');
         game.physics.enable(this.win, Phaser.Physics.ARCADE);
 
-
         // Create the player sprite and enable physics.
         player = game.add.sprite(levelData.playerStart.x, levelData.playerStart.y, 'hero');
         player.anchor.setTo(.5, .5);
-
         game.physics.enable(player, Phaser.Physics.ARCADE);
         player.body.gravity.y = 18000;
         player.body.collideWorldBounds = true;
@@ -117,6 +112,9 @@ var playState = {
 
     update: function () {
 
+        //Move the skies left
+        movingBackground.tilePosition.x -= 0.5;
+
         // Music for the game
         music.loop = true;
 
@@ -128,11 +126,9 @@ var playState = {
         this.game.physics.arcade.collide(player, this.collisionLayer);
         this.game.physics.arcade.collide(enemies, this.collisionLayer);
 
+        // Death counter
         text.setText('Deaths: ' + death);
-
-        //Move the skies left
-        //movingBackground.tilePosition.x -= 0.5;
-
+        
         // When the player sprite and win sprite overlap, the win function
         // is called.
         game.physics.arcade.overlap(player, this.win, this.Win, null, this);

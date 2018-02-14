@@ -75,6 +75,7 @@
     <Content Include="bld\Debug\resources.resfiles" />
     <Content Include="bld\Debug\resources.resfiles.intermediate" />
     <Content Include="bld\Debug\Tsc.out" />
+    <Content Include="images\Map\images\Skies.png" />
     <Content Include="images\Map\tilemaps\MapDavid.json" />
     <Content Include="images\Map\tilemaps\NewMapMads.json" />
     <Content Include="images\Map\tilemaps\taric.json" />

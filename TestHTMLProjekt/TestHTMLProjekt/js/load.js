@@ -17,7 +17,8 @@ var loadState = {
         game.load.image('win', 'images/win.png');
         game.load.image('mapTiles', 'images/Map/images/RuinMap.png');
         game.load.image('mapCollision', 'images/Map/images/collision.png');   
-        
+        game.load.image('sky', 'images/Map/images/Skies.png'); 
+
         // TileMaps
         this.load.text('data1', 'images/Map/tilemaps/MapDavid.json');
         game.load.tilemap('level1', 'images/Map/tilemaps/MapDavid.json', null, Phaser.Tilemap.TILED_JSON);
