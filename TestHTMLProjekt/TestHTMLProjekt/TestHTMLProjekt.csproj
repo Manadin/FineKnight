@@ -114,12 +114,12 @@
     <Content Include="images\Wide310x150Logo.scale-200.png" />
     <Content Include="images\win.png" />
     <Content Include="index.html" />
+    <Content Include="js\level.js" />
     <Content Include="js\boot.js" />
     <Content Include="js\game.js" />
     <Content Include="js\load.js" />
     <Content Include="js\lose.js" />
     <Content Include="js\menu.js" />
-    <Content Include="js\nextlevel.js" />
     <Content Include="js\phaser.js" />
     <Content Include="js\play.js" />
     <Content Include="js\win.js" />

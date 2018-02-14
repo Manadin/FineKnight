@@ -32,7 +32,7 @@
     <AppXManifest Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-14T10:37:05.951</Modified>
+      <Modified>2018-02-14T11:26:36.120</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -172,7 +172,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2018-02-13T16:18:11.243</Modified>
+      <Modified>2018-02-14T11:23:37.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\load.js">
       <PackagePath>js\load.js</PackagePath>
@@ -186,17 +186,21 @@
       <PackagePath>js\menu.js</PackagePath>
       <Modified>2018-02-13T16:18:11.245</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\nextLevel.js">
+      <PackagePath>js\nextLevel.js</PackagePath>
+      <Modified>2018-02-14T11:23:41.969</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\phaser.js">
       <PackagePath>js\phaser.js</PackagePath>
       <Modified>2018-02-13T16:18:11.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\play.js">
       <PackagePath>js\play.js</PackagePath>
-      <Modified>2018-02-14T10:28:44.886</Modified>
+      <Modified>2018-02-14T11:24:09.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\win.js">
       <PackagePath>js\win.js</PackagePath>
-      <Modified>2018-02-14T09:54:49.462</Modified>
+      <Modified>2018-02-14T10:59:04.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\server\server.js">
       <PackagePath>server\server.js</PackagePath>
@@ -205,7 +209,7 @@
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-14T10:37:05.774</Modified>
+      <Modified>2018-02-14T11:26:36.015</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

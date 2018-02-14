@@ -139,6 +139,9 @@
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\menu.js">
       <PackagePath>js\menu.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\nextLevel.js">
+      <PackagePath>js\nextLevel.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\js\phaser.js">
       <PackagePath>js\phaser.js</PackagePath>
     </AppxPackagedFile>
