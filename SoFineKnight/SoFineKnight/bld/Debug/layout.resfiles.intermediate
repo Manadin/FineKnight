@@ -12,14 +12,15 @@ images\Enemy\Skeleton React.png
 images\Enemy\Skeleton Walk.png
 images\Hero\Hero.png
 images\Hero\KnightSheet.png
+images\Hero\princessSheet.png
 images\LockScreenLogo.scale-200.png
 images\Map\images\collision.png
 images\Map\images\RuinMap.png
-images\Map\singularRock.png
-images\Map\SKIES.png
-images\Map\tilemaps\FineKnightMap.json
-images\Map\tilemaps\FineKnightMap.tmx
-images\player.png
+images\Map\images\Skies.png
+images\Map\tilemaps\MapDavid.json
+images\Map\tilemaps\NewMapMads.json
+images\Map\tilemaps\pawsMap.json
+images\Map\tilemaps\taric.json
 images\SplashScreen.scale-200.png
 images\Square150x150Logo.scale-200.png
 images\Square44x44Logo.scale-200.png

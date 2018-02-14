@@ -3,85 +3,98 @@
 // 2. Update the game when the player overlaps the sprite.
 // 3. Call the win state.
 
+// Controls
 var upKey;
 var downKey;
 var rightKey;
 var leftKey;
-var platforms;
+
+// Variables
+var map;
 var enemies;
+var player;
 var text;
 var enemyTimer = 1;
 var text = 0;
 var death = 0;
+var collision_tiles = [];
+
+var currentLevel = 1;
+var totalLevels = 4;
+
+var levelData;
 
 var playState = {
     
     create: function () {
-
         // Prepare the keyboard so that the human player can move.
-        this.keyboard = game.input.keyboard;
-        upKey       =   game.input.keyboard.addKey(Phaser.Keyboard.W);
-        downKey     =   game.input.keyboard.addKey(Phaser.Keyboard.S);
-        rightKey    =   game.input.keyboard.addKey(Phaser.Keyboard.D);
-        leftKey = game.input.keyboard.addKey(Phaser.Keyboard.A);
+        var keyboard2 = this.game.input.keyboard;
+        upKey       =   keyboard2.addKey(Phaser.Keyboard.W);
+        downKey     =   keyboard2.addKey(Phaser.Keyboard.S);
+        rightKey    =   keyboard2.addKey(Phaser.Keyboard.D);
+        leftKey     =   keyboard2.addKey(Phaser.Keyboard.A);
 
+        // Create the map
+        levelData = JSON.parse(this.game.cache.getText('data' + currentLevel));
+        map = game.add.tilemap('level' + currentLevel);
+        map.addTilesetImage('RuinMap', 'mapTiles');
+        map.addTilesetImage('collision', 'mapCollision');
+
+        // Create layers
+        this.backgroundLayer = map.createLayer('Background');
+
+        // Moving background in front of background and behind everything else
+        movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'sky');
+
+        // Rest of the layers
+        this.foregroundBackLayer = map.createLayer('ForegroundBack');
+        this.foregroundFrontLayer = map.createLayer('ForegroundFront');        
+        collisionLayer = map.createLayer('Collision');
+
+        // Create collision
+        this.collisionLayer = collisionLayer
+        map.setCollisionByExclusion([], true, this.collisionLayer);
+        collisionLayer.visible = false;
+        collisionLayer.resizeWorld();
+
+        // Remove border collision at bottom/left/right
         game.physics.arcade.checkCollision.down = false;
         game.physics.arcade.checkCollision.right = false;
         game.physics.arcade.checkCollision.left = false;
 
-        //this.map = this.game.add.tilemap('Map1');
-
-        //// The first parameter is the tileset name as specified in Tiled, the second is the key to the asset
-        //this.map.addTilesetImage('RuinMap', 'Tiles');
-
-        // Create layer
-        //this.backgroundLayer = this.map.createLayer('Background');
-        //this.foregroundLayer = this.map.createLayer('Foreground');
-        //this.platformsBackLayer = this.map.createLayer('PlatformsBack');
-       
-        //// Create top layers
-        //this.platformsFrontLayer = this.map.createLayer('PlatformsFront');
-        //this.collisionLayer = this.map.createLayer('Collision');
-
-        // Set collision
-        //this.map.setCollisionBetween(1, 2600, true, 'Collision');
-
-        //resizes the game world to match the layer dimensions
-        //this.backgroundlayer.resizeWorld();    
-
-        //Create the background
-        skies = game.add.tileSprite(0, 0, 800, 640, 'background');
-
         // Create the win sprite and enable physics.
-        this.win = game.add.sprite(game.world.width - 50, game.world.height - 600, 'win');
+        this.win = game.add.sprite(levelData.winStart.x, levelData.winStart.y, 'princess');
         game.physics.enable(this.win, Phaser.Physics.ARCADE);
+        this.win.animations.add('princ_idle', [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11], 10, true);
+        this.win.animations.play("princ_idle");
 
         // Create the player sprite and enable physics.
-        this.player = game.add.sprite(16, game.world.height - 80, 'knight');
-        this.player.anchor.setTo(.5, .5);
-        game.physics.enable(this.player, Phaser.Physics.ARCADE);
-        this.player.body.gravity.y = 25000;
-        this.player.body.collideWorldBounds = true;
-        this.player.checkWorldBounds = true;
-        this.player.outOfBoundsKill = true;
+        player = game.add.sprite(levelData.playerStart.x, levelData.playerStart.y, 'hero');
+        player.anchor.setTo(.5, .5);
+        game.physics.enable(player, Phaser.Physics.ARCADE);
+        player.body.gravity.y = 18000;
+        player.body.collideWorldBounds = true;
+        player.checkWorldBounds = true;
+        player.outOfBoundsKill = true;
         
         // Load player animations
-        this.player.animations.add('idle', [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 12, true);
-        this.player.animations.add('walk', [0, 1, 2, 3, 4, 5, 6, 7], 12, true);
-        ////this.player.animations.add('death', [11, 12, 13, 14, 15, 16, 17, 18, 19], 2, false);
-        ////this.player.animations.add('block', [0, 1, 2, 3, 4, 5, 6], 2, false);
-        this.player.animations.play("idle");
+        player.animations.add('idle', [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 12, true);
+        player.animations.add('walk', [0, 1, 2, 3, 4, 5, 6, 7], 12, true);
+        player.animations.add('jump', [1, 2], 2, false);
+        player.animations.add('inAir', [3], 2, true);
+        player.animations.add('falling', [4], 2, true);
+        player.animations.play("idle");
 
         // Enemies
         enemies = game.add.group();
         game.physics.enable(enemies, Phaser.Physics.ARCADE);
         enemies.enableBody = true;
 
-        for (var w = 0; w < 5; w++) {
-            var enemy = enemies.create(game.world.randomX, game.world.randomY, 'skeleton', w);
+        levelData.enemyStart.forEach(function (element) {
+            var enemy = enemies.create(element.x, element.y, 'skeleton');
             enemy.animations.add('move', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, true);
             enemy.body.gravity.y = 100;
-        }
+        }, this);
 
         // Play music
         music = game.add.audio('boden');
@@ -90,122 +103,57 @@ var playState = {
         gotItem = game.add.audio('gotItem');
 
         music.play();
-                
-        //// Create a tilesprite (x, y, width, height, key)
-        //this.map = game.add.tileSprite(0, 0, 800, 600, 'map');
 
-        //Platforms
-        platforms = game.add.group();
-        platforms.enableBody = true;
+        // Death counter
+        text = game.add.text(levelData.deathText.x, levelData.deathText.y, 'deathCounter', { fontsize: '32px', fill: '#ffffff' });
 
-        var ground;
+        //game.forceSingleUpdate = true;
 
-        // 4 tiles next to each other
-        for (var d = 0; d < 4; d++) {
-            //Platform 1
-            ground = platforms.create(game.world.width - 750 + (d * 16), game.world.height - 600, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = false;
-            //Platform 2
-            ground = platforms.create(game.world.width - 600 + (d * 16), game.world.height - 600, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-            //Platform 3
-            ground = platforms.create(game.world.width - 400 + (d * 16), game.world.height - 600, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-
-            //Platform 3
-            ground = platforms.create(game.world.width - 350 + (d * 16), game.world.height - 580, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-
-        }
-
-
-        // 8 tiles next to each other
-        for (var s = 0; s < 8; s++) {
-            //Platform 1
-            ground = platforms.create(game.world.width - 150 + (s * 16), game.world.height - 200, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-            //Platform 2
-            ground = platforms.create(game.world.width - 300 + (s * 16), game.world.height - 250, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-            //Platform 3
-            ground = platforms.create(game.world.width - 600 + (s * 16), game.world.height - 250, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-            //Platform 4
-            ground = platforms.create(game.world.width - 700 + (s * 16), game.world.height - 500, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-
-        }
-        
-        // 15 tiles next to each other
-        for (var i = 0; i < 15; i++){
-            //Platform 1
-            ground = platforms.create(i*16, game.world.height - 30, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-            //Platform 2
-            ground = platforms.create(game.world.width - 250 + (i*16), game.world.height - 30, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-            //Platform 3
-            ground = platforms.create(game.world.width - 550 + (i * 16), game.world.height - 400, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-            //Platform 4
-            ground = platforms.create(game.world.width - 250 + (i * 16), game.world.height - 580, 'stoneTile');
-            ground.scale.setTo(1, 1);
-            ground.body.immovable = true;
-        }
-
-        text = game.add.text(16, 16, 'deathCounter', { fontsize: '32px', fill: '#ffffff'});
-
+        game.camera.follow(player);
     },
 
     update: function () {
-        
-        // Collision
-        //this.game.physics.arcade.collide(this.player, this.collisionLayer);
-
-        text.setText('Deaths: ' + death);
 
         //Move the skies left
-        skies.tilePosition.x -= 0.5;
+        movingBackground.tilePosition.x -= 0.5;
 
-        // When the player sprite and sprite overlap, the win function
+        // Music for the game
+        music.loop = true;
+
+        player.body.velocity.x = 0;
+        player.body.velocity.y = 0;
+        //game.debug.bodyInfo(player, 21, 34);
+
+        // Collision
+        this.game.physics.arcade.collide(player, this.collisionLayer);
+        this.game.physics.arcade.collide(enemies, this.collisionLayer);
+
+        // Death counter
+        text.setText('Deaths: ' + death);
+        
+        // When the player sprite and win sprite overlap, the win function
         // is called.
-        game.physics.arcade.overlap(this.player, this.win, this.Win, null, this);
+        game.physics.arcade.overlap(player, this.win, this.Win, null, this);
 
-        if (!this.player.exists) {
+        if (!player.exists) {
             this.lose(this);
         }
-        //Collision with ground
-        var hitPlatform = game.physics.arcade.collide(this.player, platforms);
-        game.physics.arcade.collide(enemies, platforms);
-        this.player.body.velocity.x = 0;
-        this.player.body.velocity.y = 0;
 
         //Enemies
         enemies.forEach(function (enemy) {
-            if (enemyTimer < 100 && enemyTimer > 0) {
+            if (enemyTimer < 60 && enemyTimer > 0) {
                 enemy.body.velocity.x = 100;
                 enemy.scale.x = 1;
 
-            } else if (enemyTimer > 100) {
-                enemyTimer = -99;
+            } else if (enemyTimer > 60) {
+                enemyTimer = -59;
             } else {
                 enemy.body.velocity.x = -100;
                 enemy.scale.x = -1;
             }
             enemy.animations.play('move');
-            if (enemy.body.x + 10 > playState.player.body.x && enemy.body.x - 10 < playState.player.body.x && enemy.body.y + 20 >
-                playState.player.body.y && enemy.body.y - 20 < playState.player.body.y) {
+            if (enemy.body.x + 10 > player.body.x && enemy.body.x - 10 < player.body.x && enemy.body.y + 20 >
+                player.body.y && enemy.body.y - 20 < player.body.y) {
                 playState.lose(playState);
             }
         });
@@ -214,34 +162,57 @@ var playState = {
 
         // Finally, we give the human player a means to move the sprite.
         // Enabling x-axis movement:
+        var speed = 350;
+        //player.body.maxVelocity = 400;
 
+        // Left Key = A
         if (leftKey.isDown) {
-            this.player.body.velocity.x = -400;
-            this.player.animations.play("walk");
-            this.player.scale.x = -1;
+            //player.body.velocity.x = 0;
+           // player..body.velocity = 400;
+            //player.body.velocity.x = -400;
+            player.body.velocity.x = -speed;
+            player.animations.play("walk");
+            player.scale.x = -1;
         }
-        if (rightKey.isDown) {
-            this.player.body.velocity.x = 400;
-            this.player.animations.play("walk");
-            this.player.scale.x = 1;
+        // Right Key = D
+        else if (rightKey.isDown) {
+            //player.body.velocity.x = 0;
+            //player.body.velocity = 400;
+            //player.body.velocity.x = 400;
+            player.body.velocity.x = speed;
+            player.animations.play("walk");
+            player.scale.x = 1;
         }
-        //Enabling y-axis movement;
+        else{
+            player.body.velocity.x = 0;
+        }
+
+        // Enabling y-axis movement;
+        // Up Key = W
         if (upKey.isDown) {
-            if (this.player.body.touching.down && hitPlatform && jumpTimer === 0) {
-                this.player.body.velocity.y = -1000;
+            if (player.body.onFloor() && jumpTimer === 0) {
+                player.body.velocity.y = -625;
                 jumpTimer = 1;
-            } else if (jumpTimer > 0 && jumpTimer < 20) {
+                player.animations.play("jump");
+            } else if (jumpTimer > 0 && jumpTimer < 30) {
                 jumpTimer++;
-                this.player.body.velocity.y = -1000 + (jumpTimer * 5)
+                player.body.velocity.y = -625 + (jumpTimer * 5)
+                player.animations.play("inAir");
+            } else if (player.body.velocity.y > 0){
+                player.animations.play("falling");
             }
-        } else {
+        }
+        else {
             jumpTimer = 0;
         }
-        if (downKey.isDown) {
-            this.player.body.velocity.y = 400;
-        }
-        if (downKey.isUp && upKey.isUp && rightKey.isUp && leftKey.isUp) {
-            this.player.animations.play("idle");
+
+        // Down Key = S
+        //if (downKey.isDown) {
+        //    player.body.velocity.y = 400;
+        //}
+
+        if (player.body.velocity.x === 0 && player.body.velocity.y === 0) {
+            player.animations.play("idle");
         }
     },
 
@@ -251,7 +222,8 @@ var playState = {
         game.state.start('win');
 
         death = 0;
-
+        currentLevel<4?currentLevel++:currentLevel=1;
+        music.loop = false;
         music.stop();
         gotItem.play();
 
@@ -260,7 +232,8 @@ var playState = {
     lose: function () {
         game.state.start('lose');
         death++;
+        music.loop = false;
         music.stop();
-        deathSound.play();
+        deathSound.play()
     }
 };

@@ -32,3 +32,20 @@ F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKni
 F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt.intermediate
 F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\Skole opgaver\UCN\GameDev\Visual studio\FineKnightGitHub\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\ProjectArchitectures.txt
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\ReverseMap\resources.pri
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\AppxManifest.xml
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bin\Debug\SoFineKnight.build.appxrecipe
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\SoFineKnight.jsproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\ResourceHandlingTask.state
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\priconfig.xml.intermediate
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\layout.resfiles.intermediate
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\resources.resfiles.intermediate
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\pri.resfiles.intermediate
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\qualifiers.txt.intermediate
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\David\source\repos\FineKnight\SoFineKnight\SoFineKnight\bld\Debug\ProjectArchitectures.txt

@@ -20,3 +20,4 @@ game.state.add('lose', loseState);
 
 // After all the states are added, we start the game by calling boot state.
 game.state.start('boot');
+
