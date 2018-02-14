@@ -1,0 +1,6 @@
+C:\Users\David\source\repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll.config
+C:\Users\David\source\repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.dll
+C:\Users\David\source\repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\bin\TypeScriptHTMLApp1.pdb
+C:\Users\David\source\repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\FineKnightViewer.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.dll
+C:\Users\David\source\repos\FineKnight\TestHTMLProjekt\TestHTMLProjekt\obj\Debug\TypeScriptHTMLApp1.pdb
