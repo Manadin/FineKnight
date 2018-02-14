@@ -4,7 +4,7 @@
 var levelState = {
 
     create: function () {
-        var nextLabel = game.add.text(80, 80, 'You are great! But you are not done yet!',
+        var nextLabel = game.add.text(80, 80, 'You are great!',
             { font: '50px Arial', fill: '#00ff00' });
 
         var startNextLabel = game.add.text(80, 160, 'press the "W" key to start',
