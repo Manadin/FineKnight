@@ -35,6 +35,7 @@ var loadState = {
         // Spritesheets
         game.load.spritesheet('skeleton', 'images/Enemy/Skeleton Walk.png', 22, 33);
         game.load.spritesheet('hero', 'images/Hero/Hero.png', 21, 34, 24);
+        game.load.spritesheet('princess', 'images/princessSheet.png', 38, 52, 18);
 
         // Audio
         game.load.audio('boden', 'Audio/bodenstaendig_2000_in_rock_4bit.mp3');
