@@ -18,4 +18,4 @@ var levelState = {
     next: function () {
         game.state.start('play');
     }
-}
+};
