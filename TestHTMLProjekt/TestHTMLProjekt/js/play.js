@@ -39,22 +39,19 @@ var playState = {
         map = game.add.tilemap('level' + currentLevel);
         map.addTilesetImage('RuinMap', 'mapTiles');
         map.addTilesetImage('collision', 'mapCollision');
-        
 
         // Create layers
         this.backgroundLayer = map.createLayer('Background');
-        this.movingBackgroundLayer = map.createLayer('MovingBackground');
 
-        // Moving background
-        movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'MovingBackground');
+        // Moving background in front of background and behind everything else
+        movingBackground = game.add.tileSprite(0, 0, 1920, 1080, 'sky');
 
+        // Rest of the layers
         this.foregroundBackLayer = map.createLayer('ForegroundBack');
-        this.foregroundFrontLayer = map.createLayer('ForegroundFront');
-
-        
+        this.foregroundFrontLayer = map.createLayer('ForegroundFront');        
+        collisionLayer = map.createLayer('Collision');
 
         // Create collision
-        collisionLayer = map.createLayer('Collision');
         this.collisionLayer = collisionLayer
         map.setCollisionByExclusion([], true, this.collisionLayer);
         collisionLayer.visible = false;
@@ -66,14 +63,14 @@ var playState = {
         game.physics.arcade.checkCollision.left = false;
 
         // Create the win sprite and enable physics.
-        this.win = game.add.sprite(levelData.winStart.x, levelData.winStart.y, 'win');
+        this.win = game.add.sprite(levelData.winStart.x, levelData.winStart.y, 'princess');
         game.physics.enable(this.win, Phaser.Physics.ARCADE);
-
+        this.win.animations.add('princ_idle', [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11], 10, true);
+        this.win.animations.play("princ_idle");
 
         // Create the player sprite and enable physics.
         player = game.add.sprite(levelData.playerStart.x, levelData.playerStart.y, 'hero');
         player.anchor.setTo(.5, .5);
-
         game.physics.enable(player, Phaser.Physics.ARCADE);
         player.body.gravity.y = 18000;
         player.body.collideWorldBounds = true;
@@ -117,6 +114,9 @@ var playState = {
 
     update: function () {
 
+        //Move the skies left
+        movingBackground.tilePosition.x -= 0.5;
+
         // Music for the game
         music.loop = true;
 
@@ -128,14 +128,17 @@ var playState = {
         this.game.physics.arcade.collide(player, this.collisionLayer);
         this.game.physics.arcade.collide(enemies, this.collisionLayer);
 
+        // Death counter
         text.setText('Deaths: ' + death);
-
-        //Move the skies left
-        movingBackground.tilePosition.x -= 0.5;
-
-        // When the player sprite and win sprite overlap, the win function
-        // is called.
-        game.physics.arcade.overlap(player, this.win, this.Win, null, this);
+        
+        // When the player sprite and win sprite overlap, the nextLevel function
+        // is called. When all maps are finished the win function is called
+        if (currentLevel < 4) {
+            game.physics.arcade.overlap(player, this.win, this.NextLvl, null, this);
+        } else if (currentLevel = 4) {
+            game.physics.arcade.overlap(player, this.win, this.Win, null, this);
+        }
+        
 
         if (!player.exists) {
             this.lose(this);
@@ -165,22 +168,15 @@ var playState = {
         // Finally, we give the human player a means to move the sprite.
         // Enabling x-axis movement:
         var speed = 350;
-        //player.body.maxVelocity = 400;
 
         // Left Key = A
         if (leftKey.isDown) {
-            //player.body.velocity.x = 0;
-           // player..body.velocity = 400;
-            //player.body.velocity.x = -400;
             player.body.velocity.x = -speed;
             player.animations.play("walk");
             player.scale.x = -1;
         }
         // Right Key = D
         else if (rightKey.isDown) {
-            //player.body.velocity.x = 0;
-            //player.body.velocity = 400;
-            //player.body.velocity.x = 400;
             player.body.velocity.x = speed;
             player.animations.play("walk");
             player.scale.x = 1;
@@ -218,17 +214,25 @@ var playState = {
         }
     },
 
+    NextLvl: function () {
+        // We start the next level state
+        game.state.start('nextLevel');
+        currentLevel++;
+        music.loop = false;
+        music.stop();
+        gotItem.play();
+    },
+
     Win: function () {
 
         // We start the win state
         game.state.start('win');
 
         death = 0;
-        currentLevel<4?currentLevel++:currentLevel=1;
+        currentLevel = 1;
         music.loop = false;
         music.stop();
         gotItem.play();
-
     },
 
     lose: function () {
